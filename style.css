@@ -1,0 +1,151 @@
+/* Basic styling for the page */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    position: relative;
+  }
+  
+  /* Creating small stars with increased density */
+  #stars {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: -900px 654px #FFF, -800px 238px #FFF, -700px 156px #FFF, -600px 373px #FFF, -500px 241px #FFF, 
+                -400px 627px #FFF, -300px 143px #FFF, -200px 563px #FFF, -100px 332px #FFF, 0px 233px #FFF, 
+                100px 356px #FFF, 200px 132px #FFF, 300px 457px #FFF, 400px 124px #FFF, 500px 287px #FFF, 
+                600px 445px #FFF, 700px 672px #FFF, 800px 543px #FFF, 900px 267px #FFF, 1000px 322px #FFF,
+                1100px 154px #FFF, 1200px 612px #FFF, 1300px 189px #FFF, 1400px 789px #FFF, 1500px 200px #FFF,
+                1600px 254px #FFF, 1700px 738px #FFF, 1800px 526px #FFF, 1900px 765px #FFF, 2000px 272px #FFF;
+    animation: animStar 50s linear infinite;
+  }
+  
+  #stars:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: -900px 654px #FFF, -800px 238px #FFF, -700px 156px #FFF, -600px 373px #FFF, -500px 241px #FFF, 
+                -400px 627px #FFF, -300px 143px #FFF, -200px 563px #FFF, -100px 332px #FFF, 0px 233px #FFF, 
+                100px 356px #FFF, 200px 132px #FFF, 300px 457px #FFF, 400px 124px #FFF, 500px 287px #FFF, 
+                600px 445px #FFF, 700px 672px #FFF, 800px 543px #FFF, 900px 267px #FFF, 1000px 322px #FFF,
+                1100px 154px #FFF, 1200px 612px #FFF, 1300px 189px #FFF, 1400px 789px #FFF, 1500px 200px #FFF,
+                1600px 254px #FFF, 1700px 738px #FFF, 1800px 526px #FFF, 1900px 765px #FFF, 2000px 272px #FFF;
+  }
+  
+  /* Creating medium stars with increased density */
+  #stars2 {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: -1000px 254px #FFF, -800px 738px #FFF, -600px 526px #FFF, -400px 765px #FFF, -200px 272px #FFF, 
+                0px 723px #FFF, 200px 145px #FFF, 400px 465px #FFF, 600px 212px #FFF, 800px 615px #FFF,
+                1000px 410px #FFF, 1200px 322px #FFF, 1400px 298px #FFF, 1600px 567px #FFF, 1800px 129px #FFF,
+                2000px 254px #FFF, 2200px 738px #FFF, 2400px 526px #FFF, 2600px 765px #FFF, 2800px 272px #FFF;
+    animation: animStar 100s linear infinite;
+  }
+  
+  #stars2:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: -1000px 254px #FFF, -800px 738px #FFF, -600px 526px #FFF, -400px 765px #FFF, -200px 272px #FFF, 
+                0px 723px #FFF, 200px 145px #FFF, 400px 465px #FFF, 600px 212px #FFF, 800px 615px #FFF,
+                1000px 410px #FFF, 1200px 322px #FFF, 1400px 298px #FFF, 1600px 567px #FFF, 1800px 129px #FFF,
+                2000px 254px #FFF, 2200px 738px #FFF, 2400px 526px #FFF, 2600px 765px #FFF, 2800px 272px #FFF;
+  }
+  
+  /* Creating big stars with increased density */
+  #stars3 {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: -1100px 264px #FFF, -900px 584px #FFF, -700px 294px #FFF, -500px 467px #FFF, -300px 725px #FFF, 
+                -100px 315px #FFF, 100px 241px #FFF, 300px 515px #FFF, 500px 432px #FFF, 700px 674px #FFF,
+                900px 712px #FFF, 1100px 184px #FFF, 1300px 458px #FFF, 1500px 299px #FFF, 1700px 641px #FFF,
+                1900px 264px #FFF, 2100px 584px #FFF, 2300px 294px #FFF, 2500px 467px #FFF, 2700px 725px #FFF;
+    animation: animStar 150s linear infinite;
+  }
+  
+  #stars3:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: -1100px 264px #FFF, -900px 584px #FFF, -700px 294px #FFF, -500px 467px #FFF, -300px 725px #FFF, 
+                -100px 315px #FFF, 100px 241px #FFF, 300px 515px #FFF, 500px 432px #FFF, 700px 674px #FFF,
+                900px 712px #FFF, 1100px 184px #FFF, 1300px 458px #FFF, 1500px 299px #FFF, 1700px 641px #FFF,
+                1900px 264px #FFF, 2100px 584px #FFF, 2300px 294px #FFF, 2500px 467px #FFF, 2700px 725px #FFF,
+                -1100px 264px #FFF, -900px 584px #FFF, -700px 294px #FFF, -500px 467px #FFF, -300px 725px #FFF, 
+                -100px 315px #FFF, 100px 241px #FFF, 300px 515px #FFF, 500px 432px #FFF, 700px 674px #FFF;
+  }
+  
+  /* Animation for stars */
+  @keyframes animStar {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-2000px);
+    }
+  }
+  
+  .nav .nav-item .btn.custom-btn {
+    background-color: transparent !important; /* Transparent background */
+    color: #FFF !important; /* White text color */
+    border: none !important; /* Remove border */
+    margin-right: 10px; /* Add right margin for spacing between buttons */
+  }
+
+  .nav .nav-item .btn.custom-btn:hover {
+    background-color: #FFF !important; /* White background on hover */
+    color: #1B2735 !important; /* Dark text color on hover */
+  }
+  
+  #AboutMe img{
+    border-radius: 10%;
+  }
+  .typing {
+    font-family: 'Arial', sans-serif; /* Use a sans-serif font for a modern look */
+    font-size: 1.25rem; /* Adjust font size as needed */
+    color: #d7b94c; /* Text color */
+    display: inline-block; /* Ensures text behaves like inline text */
+    position: relative; /* Enables positioning of the pseudo-element */
+  }
+
+  /* Add "<" before the text */
+  .typing::before {
+    content: "< !-- "; /* Display the "<" symbol before the text */
+    color: white; /* Color of the "<" symbol */
+    margin-right: 4px; /* Adds space between the symbol and the text */
+  }
+
+  /* Add ">" after the text */
+  .typing::after {
+    content: "|"; /* Display the "|" cursor and ">" symbol after the text */
+    color: white; /* Cursor and ">" color */
+    animation: blink 1s step-end infinite; /* Blinking cursor animation */
+    position: absolute; /* Position it relative to the text */
+    margin-left: 2px; /* Adds space between text and the cursor */
+  }
+
+  /* Keyframes for cursor blinking effect */
+  @keyframes blink {
+    50% {
+      color: transparent; /* Makes the cursor disappear halfway through the animation */
+    }
+  }
+
+ 
