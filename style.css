@@ -7,21 +7,43 @@ body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
   position: relative;
+  display: flex; /* Makes body a flex container */
+  flex-direction: column; /* Stacks children vertically */
 }
 
-/* Creating small stars with increased density */
+/* Ensuring content area is scrollable */
+#header, #AboutMe, #projects, #skills, #experience, #education, #testimonials, #blog, #contact {
+  flex: 1 0 auto; /* Allows these sections to grow and shrink as needed */
+}
+
+#footer {
+  flex-shrink: 0; /* Prevents the footer from shrinking */
+}
+
+/* Star background animations and positioning */
+#stars, #stars2, #stars3 {
+  position: fixed; /* Fixed position to allow scrolling without moving stars */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Ensure stars are behind the content */
+}
+
 #stars {
-  position: absolute;
   width: 1px;
   height: 1px;
   background: transparent;
-  box-shadow: -900px 654px #FFF, -800px 238px #FFF, -700px 156px #FFF, -600px 373px #FFF, -500px 241px #FFF, 
-              -400px 627px #FFF, -300px 143px #FFF, -200px 563px #FFF, -100px 332px #FFF, 0px 233px #FFF, 
-              100px 356px #FFF, 200px 132px #FFF, 300px 457px #FFF, 400px 124px #FFF, 500px 287px #FFF, 
-              600px 445px #FFF, 700px 672px #FFF, 800px 543px #FFF, 900px 267px #FFF, 1000px 322px #FFF,
-              1100px 154px #FFF, 1200px 612px #FFF, 1300px 189px #FFF, 1400px 789px #FFF, 1500px 200px #FFF,
-              1600px 254px #FFF, 1700px 738px #FFF, 1800px 526px #FFF, 1900px 765px #FFF, 2000px 272px #FFF;
-  animation: animStar 50s linear infinite;
+  box-shadow: 
+    -900px 654px #FFF, -800px 238px #FFF, -700px 156px #FFF, -600px 373px #FFF, -500px 241px #FFF, 
+    -400px 627px #FFF, -300px 143px #FFF, -200px 563px #FFF, -100px 332px #FFF, 0px 233px #FFF, 
+    100px 356px #FFF, 200px 132px #FFF, 300px 457px #FFF, 400px 124px #FFF, 500px 287px #FFF, 
+    600px 445px #FFF, 700px 672px #FFF, 800px 543px #FFF, 900px 267px #FFF, 1000px 322px #FFF,
+    1100px 154px #FFF, 1200px 612px #FFF, 1300px 189px #FFF, 1400px 789px #FFF, 1500px 200px #FFF,
+    1600px 254px #FFF, 1700px 738px #FFF, 1800px 526px #FFF, 1900px 765px #FFF, 2000px 272px #FFF,
+    2100px 322px #FFF, 2200px 154px #FFF, 2300px 612px #FFF, 2400px 189px #FFF, 2500px 789px #FFF,
+    2600px 200px #FFF, 2700px 254px #FFF, 2800px 738px #FFF, 2900px 526px #FFF, 3000px 765px #FFF;
+  animation: animStar 100s linear infinite;
 }
 
 #stars:after {
@@ -31,25 +53,30 @@ body {
   width: 1px;
   height: 1px;
   background: transparent;
-  box-shadow: -900px 654px #FFF, -800px 238px #FFF, -700px 156px #FFF, -600px 373px #FFF, -500px 241px #FFF, 
-              -400px 627px #FFF, -300px 143px #FFF, -200px 563px #FFF, -100px 332px #FFF, 0px 233px #FFF, 
-              100px 356px #FFF, 200px 132px #FFF, 300px 457px #FFF, 400px 124px #FFF, 500px 287px #FFF, 
-              600px 445px #FFF, 700px 672px #FFF, 800px 543px #FFF, 900px 267px #FFF, 1000px 322px #FFF,
-              1100px 154px #FFF, 1200px 612px #FFF, 1300px 189px #FFF, 1400px 789px #FFF, 1500px 200px #FFF,
-              1600px 254px #FFF, 1700px 738px #FFF, 1800px 526px #FFF, 1900px 765px #FFF, 2000px 272px #FFF;
+  box-shadow: 
+    -900px 654px #FFF, -800px 238px #FFF, -700px 156px #FFF, -600px 373px #FFF, -500px 241px #FFF, 
+    -400px 627px #FFF, -300px 143px #FFF, -200px 563px #FFF, -100px 332px #FFF, 0px 233px #FFF, 
+    100px 356px #FFF, 200px 132px #FFF, 300px 457px #FFF, 400px 124px #FFF, 500px 287px #FFF, 
+    600px 445px #FFF, 700px 672px #FFF, 800px 543px #FFF, 900px 267px #FFF, 1000px 322px #FFF,
+    1100px 154px #FFF, 1200px 612px #FFF, 1300px 189px #FFF, 1400px 789px #FFF, 1500px 200px #FFF,
+    1600px 254px #FFF, 1700px 738px #FFF, 1800px 526px #FFF, 1900px 765px #FFF, 2000px 272px #FFF,
+    2100px 322px #FFF, 2200px 154px #FFF, 2300px 612px #FFF, 2400px 189px #FFF, 2500px 789px #FFF,
+    2600px 200px #FFF, 2700px 254px #FFF, 2800px 738px #FFF, 2900px 526px #FFF, 3000px 765px #FFF;
 }
 
 /* Creating medium stars with increased density */
 #stars2 {
-  position: absolute;
   width: 2px;
   height: 2px;
   background: transparent;
-  box-shadow: -1000px 254px #FFF, -800px 738px #FFF, -600px 526px #FFF, -400px 765px #FFF, -200px 272px #FFF, 
-              0px 723px #FFF, 200px 145px #FFF, 400px 465px #FFF, 600px 212px #FFF, 800px 615px #FFF,
-              1000px 410px #FFF, 1200px 322px #FFF, 1400px 298px #FFF, 1600px 567px #FFF, 1800px 129px #FFF,
-              2000px 254px #FFF, 2200px 738px #FFF, 2400px 526px #FFF, 2600px 765px #FFF, 2800px 272px #FFF;
-  animation: animStar 100s linear infinite;
+  box-shadow: 
+    -1000px 254px #FFF, -800px 738px #FFF, -600px 526px #FFF, -400px 765px #FFF, -200px 272px #FFF, 
+    0px 723px #FFF, 200px 145px #FFF, 400px 465px #FFF, 600px 212px #FFF, 800px 615px #FFF,
+    1000px 410px #FFF, 1200px 322px #FFF, 1400px 298px #FFF, 1600px 567px #FFF, 1800px 129px #FFF,
+    2000px 254px #FFF, 2200px 738px #FFF, 2400px 526px #FFF, 2600px 765px #FFF, 2800px 272px #FFF,
+    3000px 254px #FFF, 3200px 738px #FFF, 3400px 526px #FFF, 3600px 765px #FFF, 3800px 272px #FFF,
+    4000px 723px #FFF, 4200px 145px #FFF, 4400px 465px #FFF, 4600px 212px #FFF, 4800px 615px #FFF;
+  animation: animStar 200s linear infinite;
 }
 
 #stars2:after {
@@ -59,23 +86,28 @@ body {
   width: 2px;
   height: 2px;
   background: transparent;
-  box-shadow: -1000px 254px #FFF, -800px 738px #FFF, -600px 526px #FFF, -400px 765px #FFF, -200px 272px #FFF, 
-              0px 723px #FFF, 200px 145px #FFF, 400px 465px #FFF, 600px 212px #FFF, 800px 615px #FFF,
-              1000px 410px #FFF, 1200px 322px #FFF, 1400px 298px #FFF, 1600px 567px #FFF, 1800px 129px #FFF,
-              2000px 254px #FFF, 2200px 738px #FFF, 2400px 526px #FFF, 2600px 765px #FFF, 2800px 272px #FFF;
+  box-shadow: 
+    -1000px 254px #FFF, -800px 738px #FFF, -600px 526px #FFF, -400px 765px #FFF, -200px 272px #FFF, 
+    0px 723px #FFF, 200px 145px #FFF, 400px 465px #FFF, 600px 212px #FFF, 800px 615px #FFF,
+    1000px 410px #FFF, 1200px 322px #FFF, 1400px 298px #FFF, 1600px 567px #FFF, 1800px 129px #FFF,
+    2000px 254px #FFF, 2200px 738px #FFF, 2400px 526px #FFF, 2600px 765px #FFF, 2800px 272px #FFF,
+    3000px 254px #FFF, 3200px 738px #FFF, 3400px 526px #FFF, 3600px 765px #FFF, 3800px 272px #FFF,
+    4000px 723px #FFF, 4200px 145px #FFF, 4400px 465px #FFF, 4600px 212px #FFF, 4800px 615px #FFF;
 }
 
 /* Creating big stars with increased density */
 #stars3 {
-  position: absolute;
   width: 3px;
   height: 3px;
   background: transparent;
-  box-shadow: -1100px 264px #FFF, -900px 584px #FFF, -700px 294px #FFF, -500px 467px #FFF, -300px 725px #FFF, 
-              -100px 315px #FFF, 100px 241px #FFF, 300px 515px #FFF, 500px 432px #FFF, 700px 674px #FFF,
-              900px 712px #FFF, 1100px 184px #FFF, 1300px 458px #FFF, 1500px 299px #FFF, 1700px 641px #FFF,
-              1900px 264px #FFF, 2100px 584px #FFF, 2300px 294px #FFF, 2500px 467px #FFF, 2700px 725px #FFF;
-  animation: animStar 150s linear infinite;
+  box-shadow: 
+    -1100px 264px #FFF, -900px 584px #FFF, -700px 294px #FFF, -500px 467px #FFF, -300px 725px #FFF, 
+    -100px 315px #FFF, 100px 241px #FFF, 300px 515px #FFF, 500px 432px #FFF, 700px 674px #FFF,
+    900px 712px #FFF, 1100px 184px #FFF, 1300px 458px #FFF, 1500px 299px #FFF, 1700px 641px #FFF,
+    1900px 264px #FFF, 2100px 584px #FFF, 2300px 294px #FFF, 2500px 467px #FFF, 2700px 725px #FFF,
+    2900px 264px #FFF, 3100px 584px #FFF, 3300px 294px #FFF, 3500px 467px #FFF, 3700px 725px #FFF,
+    3900px 315px #FFF, 4100px 241px #FFF, 4300px 515px #FFF, 4500px 432px #FFF, 4700px 674px #FFF;
+  animation: animStar 300s linear infinite;
 }
 
 #stars3:after {
@@ -85,12 +117,13 @@ body {
   width: 3px;
   height: 3px;
   background: transparent;
-  box-shadow: -1100px 264px #FFF, -900px 584px #FFF, -700px 294px #FFF, -500px 467px #FFF, -300px 725px #FFF, 
-              -100px 315px #FFF, 100px 241px #FFF, 300px 515px #FFF, 500px 432px #FFF, 700px 674px #FFF,
-              900px 712px #FFF, 1100px 184px #FFF, 1300px 458px #FFF, 1500px 299px #FFF, 1700px 641px #FFF,
-              1900px 264px #FFF, 2100px 584px #FFF, 2300px 294px #FFF, 2500px 467px #FFF, 2700px 725px #FFF,
-              -1100px 264px #FFF, -900px 584px #FFF, -700px 294px #FFF, -500px 467px #FFF, -300px 725px #FFF, 
-              -100px 315px #FFF, 100px 241px #FFF, 300px 515px #FFF, 500px 432px #FFF, 700px 674px #FFF;
+  box-shadow: 
+    -1100px 264px #FFF, -900px 584px #FFF, -700px 294px #FFF, -500px 467px #FFF, -300px 725px #FFF, 
+    -100px 315px #FFF, 100px 241px #FFF, 300px 515px #FFF, 500px 432px #FFF, 700px 674px #FFF,
+    900px 712px #FFF, 1100px 184px #FFF, 1300px 458px #FFF, 1500px 299px #FFF, 1700px 641px #FFF,
+    1900px 264px #FFF, 2100px 584px #FFF, 2300px 294px #FFF, 2500px 467px #FFF, 2700px 725px #FFF,
+    2900px 264px #FFF, 3100px 584px #FFF, 3300px 294px #FFF, 3500px 467px #FFF, 3700px 725px #FFF,
+    3900px 315px #FFF, 4100px 241px #FFF, 4300px 515px #FFF, 4500px 432px #FFF, 4700px 674px #FFF;
 }
 
 /* Animation for stars */
@@ -99,7 +132,7 @@ body {
       transform: translateY(0px);
   }
   to {
-      transform: translateY(-2000px);
+      transform: translateY(-4000px);
   }
 }
 
@@ -153,6 +186,64 @@ body {
   }
 }
 
-#myCarousel{
+#myCarousel {
   border-radius: 20%;
+}
+
+/* Skills Section */
+#skills {
+  padding: 50px 0;
+}
+
+/* Experience Section */
+#experience {
+  padding: 50px 0;
+}
+
+/* Education Section */
+#education {
+  padding: 50px 0;
+}
+
+/* Testimonials Section */
+#testimonials {
+  padding: 50px 0;
+}
+
+/* Blog Section */
+#blog {
+  padding: 50px 0;
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 0;
+}
+
+/* Footer Section */
+#footer {
+  background-color: #1B2735;
+  color: white;
+  padding: 20px 0;
+}
+
+/* Ensure all text is white */
+h1, h2, h3, h4, h5, h6, p, ul, li, label, span {
+  color: white;
+}
+
+/* Ensure all links are white */
+a {
+  color: white;
+}
+
+/* Ensure all buttons are styled consistently */
+.btn-light {
+  background-color: white;
+  color: #1B2735;
+}
+
+.btn-light:hover {
+  background-color: #1B2735;
+  color: white;
 }
