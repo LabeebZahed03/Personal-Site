@@ -189,42 +189,16 @@ body {
 #myCarousel {
   border-radius: 20%;
 }
-
-/* Skills Section */
-#skills {
-  padding: 50px 0;
+#projects{
+  padding-bottom: 50px;
 }
 
-/* Experience Section */
-#experience {
+/* Adding a translucent background to each section */
+.section-content {
+  background: rgba(27, 39, 53, 0.8); /* Dark background with 80% opacity */
   padding: 50px 0;
-}
-
-/* Education Section */
-#education {
-  padding: 50px 0;
-}
-
-/* Testimonials Section */
-#testimonials {
-  padding: 50px 0;
-}
-
-/* Blog Section */
-#blog {
-  padding: 50px 0;
-}
-
-/* Contact Section */
-#contact {
-  padding: 50px 0;
-}
-
-/* Footer Section */
-#footer {
-  background-color: #1B2735;
-  color: white;
-  padding: 20px 0;
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 20px; /* Space between sections */
 }
 
 /* Ensure all text is white */
@@ -246,4 +220,33 @@ a {
 .btn-light:hover {
   background-color: #1B2735;
   color: white;
+}
+
+/* Add padding to the section content */
+.section-content {
+  padding: 30px; /* Adds padding to the content inside the section */
+  text-align: center; /* Center-aligns the text and elements inside the section */
+   /* Optional: sets a max width for the form to make it look neat */
+  /* margin: 0 auto; Centers the form horizontally */
+}
+
+/* Style for input and textarea */
+.custom-input {
+  padding: 5px; /* Adjust padding inside input fields */
+  border-radius: 5px; /* Rounded corners for input fields */
+  border: 1px solid #ccc; /* Add a border */
+  width: 80%; /* Adjust width to make input fields smaller */
+  margin: 0 auto 15px; /* Centers input fields and adds space between them */
+  font-size: 0.9rem; /* Adjust font size for input text */
+}
+
+/* Adjust the size of the text insertion points */
+.custom-input::placeholder {
+  font-size: 0.8rem; /* Smaller placeholder text */
+}
+
+/* Center-align and style the button */
+.btn-light {
+  display: block; /* Makes the button a block element */
+  margin: 20px auto 0; /* Centers the button and adds margin above */
 }
